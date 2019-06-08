@@ -1,5 +1,5 @@
 This is an application that browse directories and shows simple html pages. Created from tutorial pages in web
-and the purpose is to learn and develop apps with Flask.
+and the purpose is to learn and develop apps with Flask and test them with Jenkins.
 
 To run the app we need to have install:
 
