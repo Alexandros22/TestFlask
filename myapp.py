@@ -15,4 +15,8 @@ def salvador():
     return "Hello, Alexandros!"
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run(host='127.0.0.1', port=5050)
+=======
+    app.run(host='127.0.0.1', port=5050)
+>>>>>>> origin/master
