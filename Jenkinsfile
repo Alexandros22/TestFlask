@@ -8,7 +8,32 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'pip install --user -r requirements.txt'
+        sh '''
+
+
+
+
+
+virtualenv venv --distribute
+. venv/bin/activate 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pip install --user -r requirements.txt'''
       }
     }
     stage('test') {
