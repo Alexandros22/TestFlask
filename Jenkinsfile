@@ -8,7 +8,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'virtualenv --no-site-packages venv  . venv/bin/activate pip install -r requirements.txt'
+        withEnv(["HOME=${env.WORKSPACE}"]) {
+            sh 'pip install -r requirements.txt'
+        }
       }
     }
     stage('test') {
