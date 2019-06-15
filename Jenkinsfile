@@ -8,9 +8,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'virtualenv venv --distribute'
-        sh '. venv/bin/activate' 
-        sh 'pip install -r requirements.txt'
+        sh 'virtualenv --no-site-packages venv  . venv/bin/activate pip install -r requirements.txt'
       }
     }
     stage('test') {
