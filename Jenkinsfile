@@ -2,6 +2,7 @@ pipeline {
   agent {
     docker {
       image 'python:3.7.2'
+      args '-u root -v /var/run/docker.sock:/var/run/docker.sock'
     }
 
   }
