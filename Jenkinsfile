@@ -8,13 +8,14 @@ pipeline {
     stage('build') {
       steps {
         withEnv(["HOME=${env.WORKSPACE}"]) {
-            sh 'pip3 install --user -r requirements.txt'
+            sh """pip3 install --user -r requirements.txt
+                  python test.py"""
         }
       }
     }
     stage('test') {
       steps {
-        sh 'python test.py'
+        sh 'python --version'
       }
     }
   }
