@@ -8,7 +8,7 @@ pipeline {
     stage('build') {
       steps {
         withEnv(["HOME=${env.WORKSPACE}"]) {
-            sh 'pip3 install -r requirements.txt --user'
+            sh 'pip3 install --user -r requirements.txt'
         }
       }
     }
